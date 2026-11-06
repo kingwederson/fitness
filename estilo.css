@@ -1,0 +1,123 @@
+:root {
+    --bg: #0c0c0e;
+    --card: #16161a;
+    --card-border: #2a2a30;
+    --text: #f0f0f2;
+    --text-dim: #8a8a96;
+    --accent: #3b82f6;
+    --peitoral: #ef4444;
+    --ombro: #f59e0b;
+    --triceps: #8b5cf6;
+    --abdomen: #10b981;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.3;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    padding: 12px 10px 28px;
+  }
+
+  /* Título do treino */
+  .treino > h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin: 6px 0 14px;
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #1e3a8a, #1e40af);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.35);
+  }
+
+  /* Card de exercício */
+  .exercicio {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 12px 12px 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  }
+
+  .nome {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  /* Tags de condições */
+  .condicoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .condicao {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Cores por tipo de tag */
+  .grupo {
+    background: rgba(239, 68, 68, 0.18);
+    color: #f87171;
+  }
+
+  .grupo:contains("Ombro"),
+  .condicao.grupo[data-grupo="Ombro"] {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fbbf24;
+  }
+
+  .series {
+    background: rgba(59, 130, 246, 0.18);
+    color: #60a5fa;
+  }
+
+  .repeticoes {
+    background: rgba(16, 185, 129, 0.18);
+    color: #34d399;
+  }
+
+  .descanso {
+    background: rgba(139, 92, 246, 0.18);
+    color: #a78bfa;
+  }
+
+  /* Ajuste de cor do grupo dinamicamente via classes */
+  .grupo.Peitoral { background: rgba(239, 68, 68, 0.18); color: #f87171; }
+  .grupo.Ombro    { background: rgba(245, 158, 11, 0.18); color: #fbbf24; }
+  .grupo.Tríceps  { background: rgba(139, 92, 246, 0.18); color: #a78bfa; }
+  .grupo.Abdômen  { background: rgba(16, 185, 129, 0.18); color: #34d399; }
+
+  /* Espaçamento extra no final */
+  .treino:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  /* Scroll suave e esconder barra quando possível */
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
